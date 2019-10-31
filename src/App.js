@@ -1,5 +1,4 @@
 import React from "react";
-import Form from "./components/Temperature";
 import "./App.css";
 import CategorySelector from "./components/CategorySelector";
 

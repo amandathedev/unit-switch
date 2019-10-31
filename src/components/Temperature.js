@@ -1,39 +1,103 @@
-import React, { Component } from "react";
+import React from "react";
+import { Input } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
+import InputAdornment from "@material-ui/core/InputAdornment";
 
-export default class Form extends Component {
-  state={
-    farenheit: 0,
-    celsius: 0
+const useStyles = makeStyles(theme => ({
+  tempDiv: {
+    backgroundColor: "#282828",
+    width: "21em"
+  },
+  inputBoxes: {
+    color: "black",
+    fontWeight: "700",
+    width: "14em",
+    margin: theme.spacing(1),
+    paddingLeft: "1em"
+  },
+  title: {
+    color: "white",
+    fontWeight: "300",
+    paddingTop: "0.4em",
+    marginBottom: "0.4em"
+  },
+  adornment: {
+    marginRight: "1em"
   }
+}));
 
-  convertFarenheitToCelsius = (farenheit) => {
-    let num = (farenheit - 32) * (5/9)
-    return Math.round(num * 100) / 100
-  };
-
-  convertCelsiuisToFarenheit = (celsius) => {
-    let num = (celsius * (9/5) + 32)
-    return Math.round(num * 100) /100
+// Red
+const styles = {
+  icon: {
+    marginRight: "15px"
+  },
+  Cinput: {
+    backgroundColor: "#ff7a7a"
+  },
+  Finput: {
+    backgroundColor: "#ffa1a1"
+  },
+  Kinput: {
+    backgroundColor: "#ffc8c8",
+    marginBottom: "1em"
   }
+};
 
-  render() {
-    return (
-      <div>
-        <select class="value-dropdown" name="units">
-          <option value="temperature">Temperature</option>
-          <option value="weight">Weight</option>
-          <option value="distance">Distance</option>
-        </select>
-        <form>
-          <span>Fahrenheit</span>
-          <input class="input-box" type="text" />
-          <button type="button" onClick={() => this.convertTemp()}>
-            Convert <i class="fas fa-arrow-down"></i>
-          </button>
-          <span>Celcius</span>
-          <input class="input-box" type="text" />
-        </form>
-      </div>
-    );
-  }
-}
+const Temperature = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.tempDiv}>
+      <Typography variant="h4" className={classes.title}>
+        <i class="fas fa-thermometer-half" style={styles.icon}></i>Temperature
+      </Typography>
+      {/* Celsius */}
+      <Input
+        id="standard-adornment-weight"
+        className={classes.inputBoxes}
+        style={styles.Cinput}
+        startAdornment={
+          <InputAdornment className={classes.adornment} position="start">
+            °C
+          </InputAdornment>
+        }
+        aria-describedby="standard-weight-helper-text"
+        inputProps={{
+          "aria-label": "weight"
+        }}
+      />
+      {/* Fahrenheit */}
+      <Input
+        id="standard-adornment-weight"
+        className={classes.inputBoxes}
+        style={styles.Finput}
+        startAdornment={
+          <InputAdornment className={classes.adornment} position="start">
+            °F
+          </InputAdornment>
+        }
+        aria-describedby="standard-weight-helper-text"
+        inputProps={{
+          "aria-label": "weight"
+        }}
+      />
+      {/* Kelvin */}
+      <Input
+        id="standard-adornment-weight"
+        className={classes.inputBoxes}
+        style={styles.Kinput}
+        startAdornment={
+          <InputAdornment className={classes.adornment} position="start">
+            °K
+          </InputAdornment>
+        }
+        aria-describedby="standard-weight-helper-text"
+        inputProps={{
+          "aria-label": "weight"
+        }}
+      />
+    </div>
+  );
+};
+
+export default Temperature;
