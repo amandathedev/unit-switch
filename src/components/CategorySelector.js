@@ -13,10 +13,13 @@ const useStyles = makeStyles(theme => ({
   },
   categoryDiv: {
     backgroundColor: "#282828",
-    width: "20em"
+    width: "21em"
   },
   title: {
-    color: "white"
+    color: "white",
+    fontWeight: "300",
+    paddingTop: "0.4em",
+    marginBottom: "0.4em"
   }
 }));
 
@@ -25,7 +28,7 @@ const styles = {
     backgroundColor: "#ff5b5f"
   },
   buttonLength: {
-    backgroundColor: "#3eaf76"
+    backgroundColor: "#61c793"
   },
   buttonWeight: {
     backgroundColor: "#F6E481"
@@ -34,10 +37,15 @@ const styles = {
     backgroundColor: "#448ee4"
   },
   buttonCook: {
-    backgroundColor: "#dfc5fe"
+    backgroundColor: "#dfc5fe",
+    marginBottom: "1em"
   },
   icon: {
     marginRight: "5px"
+  },
+  bigIcon: {
+    marginRight: "15px",
+    fontSize: "0.8em"
   }
 };
 
@@ -48,7 +56,7 @@ const CategorySelector = () => {
   return (
     <div className={classes.categoryDiv}>
       <Typography variant="h4" className={classes.title}>
-        UnitSwitch<i class="fas fa-sync"></i>
+        <i class="fas fa-sync" style={styles.bigIcon}></i>UnitSwitch
       </Typography>
       <Button
         variant="contained"

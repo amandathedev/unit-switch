@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "My Extension",
-  "description": "Blah blah stuff",
+  "description": "Super awesome unit converter",
   "version": "0.0.1",
 
   "browser_action": {
