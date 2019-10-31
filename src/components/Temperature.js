@@ -1,20 +1,14 @@
 import React, { Component } from "react";
+import { buildMatchMemberExpression } from "@babel/types";
 
 export default class Form extends Component {
   state={
     farenheit: 0,
-    celsius: 0
+    celsius: 0,
+    kelvin: 0
   }
 
-  convertFarenheitToCelsius = (farenheit) => {
-    let num = (farenheit - 32) * (5/9)
-    return Math.round(num * 100) / 100
-  };
 
-  convertCelsiuisToFarenheit = (celsius) => {
-    let num = (celsius * (9/5) + 32)
-    return Math.round(num * 100) /100
-  }
 
   render() {
     return (
