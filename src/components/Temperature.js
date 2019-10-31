@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 
 export default class Form extends Component {
-  convertTemp = () => {
-    alert("yo");
+  state={
+    farenheit: 0,
+    celsius: 0
+  }
+
+  convertFarenheitToCelsius = (farenheit) => {
+    let num = (farenheit - 32) * (5/9)
+    return Math.round(num * 100) / 100
   };
+
+  convertCelsiuisToFarenheit = (celsius) => {
+    let num = (celsius * (9/5) + 32)
+    return Math.round(num * 100) /100
+  }
 
   render() {
     return (
