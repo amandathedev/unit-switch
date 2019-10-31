@@ -11,11 +11,11 @@ const useStyles = makeStyles(theme => ({
   buttonTemp: {
     backgroundColor: "#ED8A68"
   },
-  buttonDist: {
-    backgroundColor: "#669a61"
+  buttonLength: {
+    backgroundColor: "#5FA052"
   },
   buttonWeight: {
-    backgroundColor: "#e5d678"
+    backgroundColor: "#F6E481"
   }
 }));
 
@@ -35,9 +35,9 @@ const CategorySelector = () => {
       </Button>
       <Button
         variant="contained"
-        className={(classes.button, classes.buttonDist)}
+        className={(classes.button, classes.buttonLength)}
       >
-        Distance
+        Length
       </Button>
       <Button
         variant="contained"
@@ -47,9 +47,6 @@ const CategorySelector = () => {
       </Button>
       <Button variant="contained" className={classes.button}>
         Speed
-      </Button>
-      <Button variant="contained" className={classes.button}>
-        Volume
       </Button>
       <Button variant="contained" className={classes.button}>
         Cooking
