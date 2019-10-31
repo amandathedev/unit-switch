@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Form extends Component {
   convertTemp = () => {
-    console.log("yo");
+    alert("yo");
   };
 
   render() {
@@ -16,15 +16,11 @@ export default class Form extends Component {
         <form>
           <span>Fahrenheit</span>
           <input class="input-box" type="text" />
-          <button type="button" onClick={this.convertTemp}>
+          <button type="button" onClick={() => this.convertTemp()}>
             Convert <i class="fas fa-arrow-down"></i>
           </button>
-          {/* <hr /> */}
           <span>Celcius</span>
           <input class="input-box" type="text" />
-          {/* <button type="button">
-          Convert <i class="fas fa-arrow-up"></i>
-        </button> */}
         </form>
       </div>
     );
