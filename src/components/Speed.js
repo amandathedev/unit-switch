@@ -33,10 +33,10 @@ const styles = {
     marginRight: "15px"
   },
   mileInput: {
-    backgroundColor: "#1ba3b1"
+    backgroundColor: "#4ce44c"
   },
   kmInput: {
-    backgroundColor: "#20c2d3"
+    backgroundColor: "#90EE90"
   }
 };
 

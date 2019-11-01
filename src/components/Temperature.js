@@ -45,34 +45,34 @@ const styles = {
 };
 
 const convertFarenheitToCelsius = farenheit => {
-  let num = (farenheit - 32) * (5/9)
-  return Math.round(num * 100) / 100
+  let num = (farenheit - 32) * (5 / 9);
+  return Math.round(num * 100) / 100;
 };
 
 const convertFarenheitToKelvin = farenheit => {
-  let num = ((farenheit - 32) * (5/9) + 273.15)
-  return Math.round(num * 100) / 100
-}
+  let num = (farenheit - 32) * (5 / 9) + 273.15;
+  return Math.round(num * 100) / 100;
+};
 
 const convertCelsiuToKelvin = celsius => {
-  let num = celsius + 273.15
-  return Math.round(num * 100) / 100
-}
+  let num = celsius + 273.15;
+  return Math.round(num * 100) / 100;
+};
 
 const convertCelsiuisToFarenheit = celsius => {
-  let num = (celsius * (9/5) + 32)
-  return Math.round(num * 100) /100
-}
+  let num = celsius * (9 / 5) + 32;
+  return Math.round(num * 100) / 100;
+};
 
 const convertKelvinToFarenheit = kelvin => {
-  let num = (kelvin - 273.15) * (9/5) + 32
-  return Math.round(num * 100) / 100
-}
+  let num = (kelvin - 273.15) * (9 / 5) + 32;
+  return Math.round(num * 100) / 100;
+};
 
-convertKelvinToCelsius = kelvin => {
-  let num = kelvin - 273.15
-  return Math.round(num * 100) / 100
-}
+const convertKelvinToCelsius = kelvin => {
+  let num = kelvin - 273.15;
+  return Math.round(num * 100) / 100;
+};
 
 const Temperature = () => {
   const classes = useStyles();

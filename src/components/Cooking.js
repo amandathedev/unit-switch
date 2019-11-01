@@ -32,23 +32,29 @@ const styles = {
   icon: {
     marginRight: "15px"
   },
-  mileInput: {
-    backgroundColor: "#1ba3b1"
+  gallonInput: {
+    backgroundColor: "#953efc"
   },
-  footInput: {
-    backgroundColor: "#20c2d3"
+  literInput: {
+    backgroundColor: "#9f51fc"
   },
-  inchInput: {
-    backgroundColor: "#39d1e1"
+  flOunceInput: {
+    backgroundColor: "#aa65fc"
   },
-  kmInput: {
-    backgroundColor: "#6cdde9"
+  pintInput: {
+    backgroundColor: "#b478fd"
   },
-  meterInput: {
-    backgroundColor: "#8ee5ee"
+  quartInput: {
+    backgroundColor: "#bf8bfd"
   },
-  cmInput: {
-    backgroundColor: "#b0edf3",
+  cupInput: {
+    backgroundColor: "#ca9efd"
+  },
+  tbspInput: {
+    backgroundColor: "#d4b2fe"
+  },
+  tspInput: {
+    backgroundColor: "#dfc5fe",
     marginBottom: "1em"
   }
 };
@@ -60,14 +66,14 @@ const Cooking = () => {
       <Typography variant="h4" className={classes.title}>
         <i class="fas fa-utensils" style={styles.icon}></i>Cooking
       </Typography>
-      {/* Mile */}
+      {/* gallon */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
-        style={styles.mileInput}
+        style={styles.gallonInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            mi
+            gal
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
@@ -75,14 +81,14 @@ const Cooking = () => {
           "aria-label": "weight"
         }}
       />
-      {/* Foot */}
+      {/* liter */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
-        style={styles.footInput}
+        style={styles.literInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            ft
+            L
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
@@ -90,14 +96,29 @@ const Cooking = () => {
           "aria-label": "weight"
         }}
       />
-      {/* Inch */}
+      {/* fl Ounce */}
+      {/* <Input
+        id="standard-adornment-weight"
+        className={classes.inputBoxes}
+        style={styles.flOunceInput}
+        startAdornment={
+          <InputAdornment className={classes.adornment} position="start">
+            fLoz
+          </InputAdornment>
+        }
+        aria-describedby="standard-weight-helper-text"
+        inputProps={{
+          "aria-label": "weight"
+        }}
+      /> */}
+      {/* pint */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
-        style={styles.inchInput}
+        style={styles.pintInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            in
+            pint
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
@@ -105,14 +126,14 @@ const Cooking = () => {
           "aria-label": "weight"
         }}
       />
-      {/* Kilometer */}
+      {/* quart */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
-        style={styles.kmInput}
+        style={styles.quartInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            km
+            qt
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
@@ -120,14 +141,14 @@ const Cooking = () => {
           "aria-label": "weight"
         }}
       />
-      {/* Meter */}
+      {/* Cup */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
-        style={styles.meterInput}
+        style={styles.cupInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            m
+            cup
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
@@ -135,14 +156,29 @@ const Cooking = () => {
           "aria-label": "weight"
         }}
       />
-      {/* Centimeter */}
+      {/* Tablespoon */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
-        style={styles.cmInput}
+        style={styles.tbspInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            cm
+            Tbsp
+          </InputAdornment>
+        }
+        aria-describedby="standard-weight-helper-text"
+        inputProps={{
+          "aria-label": "weight"
+        }}
+      />
+      {/* Teaspoon */}
+      <Input
+        id="standard-adornment-weight"
+        className={classes.inputBoxes}
+        style={styles.tspInput}
+        startAdornment={
+          <InputAdornment className={classes.adornment} position="start">
+            tsp
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
