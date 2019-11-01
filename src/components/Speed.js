@@ -35,21 +35,8 @@ const styles = {
   mileInput: {
     backgroundColor: "#1ba3b1"
   },
-  footInput: {
-    backgroundColor: "#20c2d3"
-  },
-  inchInput: {
-    backgroundColor: "#39d1e1"
-  },
   kmInput: {
-    backgroundColor: "#6cdde9"
-  },
-  meterInput: {
-    backgroundColor: "#8ee5ee"
-  },
-  cmInput: {
-    backgroundColor: "#b0edf3",
-    marginBottom: "1em"
+    backgroundColor: "#20c2d3"
   }
 };
 
@@ -60,14 +47,14 @@ const Speed = () => {
       <Typography variant="h4" className={classes.title}>
         <i class="fas fa-tachometer-alt" style={styles.icon}></i>Speed
       </Typography>
-      {/* Mile */}
+      {/* mph */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
         style={styles.mileInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            mi
+            mph
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
@@ -75,74 +62,14 @@ const Speed = () => {
           "aria-label": "weight"
         }}
       />
-      {/* Foot */}
-      <Input
-        id="standard-adornment-weight"
-        className={classes.inputBoxes}
-        style={styles.footInput}
-        startAdornment={
-          <InputAdornment className={classes.adornment} position="start">
-            ft
-          </InputAdornment>
-        }
-        aria-describedby="standard-weight-helper-text"
-        inputProps={{
-          "aria-label": "weight"
-        }}
-      />
-      {/* Inch */}
-      <Input
-        id="standard-adornment-weight"
-        className={classes.inputBoxes}
-        style={styles.inchInput}
-        startAdornment={
-          <InputAdornment className={classes.adornment} position="start">
-            in
-          </InputAdornment>
-        }
-        aria-describedby="standard-weight-helper-text"
-        inputProps={{
-          "aria-label": "weight"
-        }}
-      />
-      {/* Kilometer */}
+      {/* km/h */}
       <Input
         id="standard-adornment-weight"
         className={classes.inputBoxes}
         style={styles.kmInput}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
-            km
-          </InputAdornment>
-        }
-        aria-describedby="standard-weight-helper-text"
-        inputProps={{
-          "aria-label": "weight"
-        }}
-      />
-      {/* Meter */}
-      <Input
-        id="standard-adornment-weight"
-        className={classes.inputBoxes}
-        style={styles.meterInput}
-        startAdornment={
-          <InputAdornment className={classes.adornment} position="start">
-            m
-          </InputAdornment>
-        }
-        aria-describedby="standard-weight-helper-text"
-        inputProps={{
-          "aria-label": "weight"
-        }}
-      />
-      {/* Centimeter */}
-      <Input
-        id="standard-adornment-weight"
-        className={classes.inputBoxes}
-        style={styles.cmInput}
-        startAdornment={
-          <InputAdornment className={classes.adornment} position="start">
-            cm
+            km/h
           </InputAdornment>
         }
         aria-describedby="standard-weight-helper-text"
