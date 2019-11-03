@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
@@ -54,12 +55,12 @@ const convertFarenheitToKelvin = farenheit => {
   return Math.round(num * 100) / 100;
 };
 
-const convertCelsiuToKelvin = celsius => {
+const convertCelsiusToKelvin = celsius => {
   let num = celsius + 273.15;
   return Math.round(num * 100) / 100;
 };
 
-const convertCelsiuisToFarenheit = celsius => {
+const convertCelsiusToFarenheit = celsius => {
   let num = celsius * (9 / 5) + 32;
   return Math.round(num * 100) / 100;
 };
@@ -74,7 +75,14 @@ const convertKelvinToCelsius = kelvin => {
   return Math.round(num * 100) / 100
 }
 
+const handleCelsiusChange = (event) => {
+
+}
+
 const Temperature = () => {
+  const[celsius, setCelsiuis] = useState("")
+  const[kelvin, setKelvin] = useState("")
+  const[farenheit, setFarenheit] = useState("")
   const classes = useStyles();
   return (
     <div className={classes.tempDiv}>
@@ -86,6 +94,8 @@ const Temperature = () => {
         id="standard-adornment-weight"
         className={classes.inputBoxes}
         style={styles.Cinput}
+        value={celsius}
+        onChange={handleCelsiusChange}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
             °C
