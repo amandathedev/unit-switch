@@ -69,7 +69,7 @@ const convertKelvinToFarenheit = kelvin => {
   return Math.round(num * 100) / 100
 }
 
-convertKelvinToCelsius = kelvin => {
+const convertKelvinToCelsius = kelvin => {
   let num = kelvin - 273.15
   return Math.round(num * 100) / 100
 }
