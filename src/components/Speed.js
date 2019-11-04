@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
@@ -41,8 +42,33 @@ const styles = {
   }
 };
 
+const convertKmhToMph = kmh => {
+  let num = Number(kmh) / 1.609
+  return Math.round(num * 100) / 100;
+}
+
+const convertMphToKmh = mph => {
+  let num = Number(mph) * 1.609
+  return Math.round(num * 100) / 100;
+}
+
 const Speed = () => {
+  const[mph, setMph] = useState();
+  const[kmh, setKmh] = useState();
   const classes = useStyles();
+
+  const handleMphChange = event => {
+    let value = event.target.value
+    setMph(value)
+    setKmh(convertMphToKmh(value))
+  }
+
+  const handleKmhChange = event => {
+    let value = event.target.value
+    setKmh(value)
+    setMph(convertKmhToMph(value))
+  }
+
   return (
     <div className={classes.speedDiv}>
       <Typography variant="h4" className={classes.title}>
@@ -54,6 +80,8 @@ const Speed = () => {
         type="number"
         className={classes.inputBoxes}
         style={styles.mileInput}
+        value={mph}
+        onChange={handleMphChange}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
             mph
@@ -70,6 +98,8 @@ const Speed = () => {
         type="number"
         className={classes.inputBoxes}
         style={styles.kmInput}
+        value={kmh}
+        onChange={handleKmhChange}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
             km/h

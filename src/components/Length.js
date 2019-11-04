@@ -248,7 +248,7 @@ const Length = () => {
     let value = event.target.value;
     setKilometer(value);
     setMile(convertKilometerToMile(value));
-    setFoot(convertKilometerToMile(value));
+    setFoot(convertKilometerToFoot(value));
     setInch(convertKilometerToInch(value));
     setMeter(convertKilometerToMeter(value));
     setCentimeter(convertKilometerToCentimeter(value));
