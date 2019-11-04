@@ -45,13 +45,13 @@ const styles = {
   }
 };
 
-const convertFarenheitToCelsius = farenheit => {
-  let num = (farenheit - 32) * (5 / 9);
+const convertFahrenheitToCelsius = fahrenheit => {
+  let num = (fahrenheit - 32) * (5 / 9);
   return Math.round(num * 100) / 100;
 };
 
-const convertFarenheitToKelvin = farenheit => {
-  let num = (farenheit - 32) * (5 / 9) + 273.15;
+const convertFahrenheitToKelvin = fahrenheit => {
+  let num = (fahrenheit - 32) * (5 / 9) + 273.15;
   return Math.round(num * 100) / 100;
 };
 
@@ -60,12 +60,12 @@ const convertCelsiusToKelvin = celsius => {
   return Math.round(num * 100) / 100;
 };
 
-const convertCelsiusToFarenheit = celsius => {
+const convertCelsiusToFahrenheit = celsius => {
   let num = celsius * (9 / 5) + 32;
   return Math.round(num * 100) / 100;
 };
 
-const convertKelvinToFarenheit = kelvin => {
+const convertKelvinToFahrenheit = kelvin => {
   let num = (kelvin - 273.15) * (9 / 5) + 32;
   return Math.round(num * 100) / 100;
 };
@@ -75,15 +75,22 @@ const convertKelvinToCelsius = kelvin => {
   return Math.round(num * 100) / 100
 }
 
-const handleCelsiusChange = (event) => {
 
-}
 
 const Temperature = () => {
-  const[celsius, setCelsiuis] = useState("")
+  const[celsius, setCelsius] = useState("")
   const[kelvin, setKelvin] = useState("")
-  const[farenheit, setFarenheit] = useState("")
+  const[fahrenheit, setFahrenheit] = useState("")
   const classes = useStyles();
+
+  const handleCelsiusChange = (event) => {
+    //set celsius to input
+    //set farenheit using conversion method
+    //set kelvin using conversion method
+    setCelsius(event.target.value)
+    setFahrenheit(convertCelsiusToFahrenheit(event.target.value))
+    setKelvin(convertCelsiusToKelvin(event.target.value))
+  }
   return (
     <div className={classes.tempDiv}>
       <Typography variant="h4" className={classes.title}>
@@ -111,6 +118,7 @@ const Temperature = () => {
         id="standard-adornment-weight"
         className={classes.inputBoxes}
         style={styles.Finput}
+        value={fahrenheit}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
             °F
@@ -126,6 +134,7 @@ const Temperature = () => {
         id="standard-adornment-weight"
         className={classes.inputBoxes}
         style={styles.Kinput}
+        value={kelvin}
         startAdornment={
           <InputAdornment className={classes.adornment} position="start">
             °K
