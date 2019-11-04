@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "700",
     width: "14em",
     margin: theme.spacing(1),
-    paddingLeft: "1em"
+    paddingLeft: "1em",
+    borderRadius: "10px"
   },
   title: {
     color: "white",
@@ -69,6 +70,7 @@ const Cooking = () => {
       {/* gallon */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.gallonInput}
         startAdornment={
@@ -84,6 +86,7 @@ const Cooking = () => {
       {/* liter */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.literInput}
         startAdornment={
@@ -114,6 +117,7 @@ const Cooking = () => {
       {/* pint */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.pintInput}
         startAdornment={
@@ -129,6 +133,7 @@ const Cooking = () => {
       {/* quart */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.quartInput}
         startAdornment={
@@ -144,6 +149,7 @@ const Cooking = () => {
       {/* Cup */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.cupInput}
         startAdornment={
@@ -159,6 +165,7 @@ const Cooking = () => {
       {/* Tablespoon */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.tbspInput}
         startAdornment={
@@ -174,6 +181,7 @@ const Cooking = () => {
       {/* Teaspoon */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.tspInput}
         startAdornment={

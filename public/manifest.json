@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "My Extension",
+  "name": "UnitSwitch",
   "description": "Super awesome unit converter",
   "version": "0.0.1",
 
   "browser_action": {
     "default_popup": "index.html",
-    "default_title": "Open the popup"
+    "default_title": "UnitSwitch"
   },
   "content_security_policy": "script-src 'self' 'sha256-wkEhk1Pm58HZQSzT/oPAcIeUYSsJpEEGo2v2M1aGgTs='; object-src 'self'",
   "permissions": []
