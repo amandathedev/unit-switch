@@ -161,43 +161,48 @@ const Weight = () => {
   const classes = useStyles();
 
   const handlePoundChange = event => {
-    setPound(event.target.value)
-    setKilogram(convertPoundToKilogram(event.target.value))
-    setOunce(convertPoundToOunce(event.target.value))
-    setGram(convertPoundToGram(event.target.value))
-    setTon(convertPoundToTon(event.target.value))
+    let x = event.target.value
+    setPound(x)
+    setKilogram(convertPoundToKilogram(x))
+    setOunce(convertPoundToOunce(x))
+    setGram(convertPoundToGram(x))
+    setTon(convertPoundToTon(x))
   }
 
   const handleKilogramChange = event => {
-    setKilogram(event.target.value)
-    setPound(convertKilogramToPound(event.target.value))
-    setGram(convertKilogramToGram(event.target.value))
-    setOunce(convertKilogramToOunce(event.target.value))
-    setTon(convertKilogramToTon(event.target.value))
+    let value = event.target.value
+    setKilogram(value)
+    setPound(convertKilogramToPound(value))
+    setGram(convertKilogramToGram(value))
+    setOunce(convertKilogramToOunce(value))
+    setTon(convertKilogramToTon(value))
   }
 
   const handleGramChange = event => {
-    setGram(event.target.value)
-    setPound(convertGramToPound(event.target.value))
-    setKilogram(convertGramToKilogram(event.target.value))
-    setOunce(convertGramToOunce(event.target.value))
-    setTon(convertGramToTon(event.target.value))
+    let value = event.target.value
+    setGram(value)
+    setPound(convertGramToPound(value))
+    setKilogram(convertGramToKilogram(value))
+    setOunce(convertGramToOunce(value))
+    setTon(convertGramToTon(value))
   }
 
   const handleOunceChange = event => {
-    setOunce(event.target.value)
-    setPound(convertOunceToPound(event.target.value))
-    setTon(convertOunceToTon(event.target.value))
-    setGram(convertOunceToGram(event.target.value))
-    setKilogram(convertOunceToKilogram(event.target.value))
+    let value = event.target.value
+    setOunce(value)
+    setPound(convertOunceToPound(value))
+    setTon(convertOunceToTon(value))
+    setGram(convertOunceToGram(value))
+    setKilogram(convertOunceToKilogram(value))
   }
 
   const handleTonChange = event => {
-    setTon(event.target.value)
-    setPound(convertTonToPound(event.target.value))
-    setGram(convertTonToGram(event.target.value))
-    setOunce(convertTonToOunce(event.target.value))
-    setKilogram(convertTonToKilogram(event.target.value))
+    let value = event.target.value
+    setTon(value)
+    setPound(convertTonToPound(value))
+    setGram(convertTonToGram(value))
+    setOunce(convertTonToOunce(value))
+    setKilogram(convertTonToKilogram(value))
   }
 
   return (

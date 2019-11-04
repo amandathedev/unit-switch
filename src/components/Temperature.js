@@ -84,21 +84,24 @@ const Temperature = () => {
   const classes = useStyles();
 
   const handleCelsiusChange = (event) => {
-    setCelsius(event.target.value)
-    setFahrenheit(convertCelsiusToFahrenheit(event.target.value))
-    setKelvin(convertCelsiusToKelvin(event.target.value))
+    let value = event.target.value
+    setCelsius(value)
+    setFahrenheit(convertCelsiusToFahrenheit(value))
+    setKelvin(convertCelsiusToKelvin(value))
   }
 
   const handleFahrenheitChange = (event) => {
-    setFahrenheit(event.target.value)
-    setKelvin(convertFahrenheitToKelvin(event.target.value))
-    setCelsius(convertFahrenheitToCelsius(event.target.value))
+    let value = event.target.value
+    setFahrenheit(value)
+    setKelvin(convertFahrenheitToKelvin(value))
+    setCelsius(convertFahrenheitToCelsius(value))
   }
 
   const handleKelvinChange = (event) => {
-    setKelvin(event.target.value)
-    setFahrenheit(convertKelvinToFahrenheit(event.target.value))
-    setCelsius(convertKelvinToCelsius(event.target.value))
+    let value = event.target.value
+    setKelvin(value)
+    setFahrenheit(convertKelvinToFahrenheit(value))
+    setCelsius(convertKelvinToCelsius(value))
   }
   
   return (
