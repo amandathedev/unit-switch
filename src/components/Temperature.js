@@ -78,9 +78,9 @@ const convertKelvinToCelsius = kelvin => {
 
 
 const Temperature = () => {
-  const[celsius, setCelsius] = useState("")
-  const[kelvin, setKelvin] = useState("")
-  const[fahrenheit, setFahrenheit] = useState("")
+  const[celsius, setCelsius] = useState()
+  const[kelvin, setKelvin] = useState()
+  const[fahrenheit, setFahrenheit] = useState()
   const classes = useStyles();
 
   const handleCelsiusChange = (event) => {
