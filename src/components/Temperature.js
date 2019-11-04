@@ -108,6 +108,7 @@ const Temperature = () => {
       {/* Celsius */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.Cinput}
         value={celsius}
@@ -125,6 +126,7 @@ const Temperature = () => {
       {/* Fahrenheit */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.Finput}
         value={fahrenheit}
@@ -142,6 +144,7 @@ const Temperature = () => {
       {/* Kelvin */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.Kinput}
         value={kelvin}

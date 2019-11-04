@@ -60,6 +60,7 @@ const Weight = () => {
       {/* Pound */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.poundInput}
         startAdornment={
@@ -75,6 +76,7 @@ const Weight = () => {
       {/* Kilogram */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.kgInput}
         startAdornment={
@@ -90,6 +92,7 @@ const Weight = () => {
       {/* Ounce */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.ozInput}
         startAdornment={
@@ -105,6 +108,7 @@ const Weight = () => {
       {/* Gram */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.gramInput}
         startAdornment={
@@ -120,6 +124,7 @@ const Weight = () => {
       {/* Ton */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.tonInput}
         startAdornment={

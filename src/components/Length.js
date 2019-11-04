@@ -64,6 +64,7 @@ const Length = () => {
       {/* Mile */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.mileInput}
         startAdornment={
@@ -79,6 +80,7 @@ const Length = () => {
       {/* Foot */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.footInput}
         startAdornment={
@@ -94,6 +96,7 @@ const Length = () => {
       {/* Inch */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.inchInput}
         startAdornment={
@@ -109,6 +112,7 @@ const Length = () => {
       {/* Kilometer */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.kmInput}
         startAdornment={
@@ -124,6 +128,7 @@ const Length = () => {
       {/* Meter */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.meterInput}
         startAdornment={
@@ -139,6 +144,7 @@ const Length = () => {
       {/* Centimeter */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.cmInput}
         startAdornment={

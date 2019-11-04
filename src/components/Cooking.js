@@ -70,6 +70,7 @@ const Cooking = () => {
       {/* gallon */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.gallonInput}
         startAdornment={
@@ -85,6 +86,7 @@ const Cooking = () => {
       {/* liter */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.literInput}
         startAdornment={
@@ -115,6 +117,7 @@ const Cooking = () => {
       {/* pint */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.pintInput}
         startAdornment={
@@ -130,6 +133,7 @@ const Cooking = () => {
       {/* quart */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.quartInput}
         startAdornment={
@@ -145,6 +149,7 @@ const Cooking = () => {
       {/* Cup */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.cupInput}
         startAdornment={
@@ -160,6 +165,7 @@ const Cooking = () => {
       {/* Tablespoon */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.tbspInput}
         startAdornment={
@@ -175,6 +181,7 @@ const Cooking = () => {
       {/* Teaspoon */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.tspInput}
         startAdornment={
