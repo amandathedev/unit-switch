@@ -7,7 +7,10 @@ const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
     width: "16em",
-    fontWeight: "700"
+    fontWeight: "700",
+    borderRadius: "10px",
+    height: "30px",
+    paddingBottom: "2.2em"
   },
   categoryDiv: {
     backgroundColor: "#282828",
@@ -17,30 +20,40 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     fontWeight: "300",
     paddingTop: "0.4em",
-    marginBottom: "0.4em"
+    marginBottom: "0.2em"
   }
 }));
 
 const styles = {
   buttonTemp: {
     // Red
-    backgroundColor: "#ff7a7a"
+    // backgroundColor: "#ff7a7a"
+    backgroundColor: "#C74BF6"
+    // color: "red"
   },
   buttonLength: {
     // Blue
-    backgroundColor: "#8EE5EE"
+    // backgroundColor: "#8EE5EE"
+    backgroundColor: "#9A75F0"
+    // color: "blue"
   },
   buttonWeight: {
     // Yellow
-    backgroundColor: "#FFF68F"
+    // backgroundColor: "#FFF68F"
+    backgroundColor: "#6E9EEB"
+    // color: "yellow"
   },
   buttonSpeed: {
     // Green
-    backgroundColor: "#90EE90"
+    // backgroundColor: "#90EE90"
+    backgroundColor: "#41C8E5"
+    // color: "green"
   },
   buttonCook: {
     // Purple
-    backgroundColor: "#dfc5fe",
+    // backgroundColor: "#dfc5fe",
+    backgroundColor: "#14F2E0",
+    // color: "purple",
     marginBottom: "1em"
   },
   icon: {

@@ -34,176 +34,180 @@ const styles = {
     marginRight: "15px"
   },
   poundInput: {
-    backgroundColor: "#ffed19"
+    // backgroundColor: "#ffed19"
+    backgroundColor: "#FFD400"
   },
   kgInput: {
-    backgroundColor: "#fff154"
+    // backgroundColor: "#fff154"
+    backgroundColor: "#FFDD3C"
   },
   ozInput: {
-    backgroundColor: "#FFF68F"
+    // backgroundColor: "#FFF68F"
+    backgroundColor: "#FFEA61"
   },
   gramInput: {
-    backgroundColor: "#fff9b6"
+    // backgroundColor: "#fff9b6"
+    backgroundColor: "#FFF192"
   },
   tonInput: {
-    backgroundColor: "#fffcdd",
+    // backgroundColor: "#fffcdd",
+    backgroundColor: "#FFFFB7",
     marginBottom: "1em"
   }
 };
 
 const convertPoundToKilogram = pound => {
-  let num = Number(pound) / 2.205
+  let num = Number(pound) / 2.205;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertPoundToGram = pound => {
-  let num = Number(pound) * 453.592
+  let num = Number(pound) * 453.592;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertPoundToOunce = pound => {
-  let num = Number(pound) * 16
+  let num = Number(pound) * 16;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertPoundToTon = pound => {
-  let num = Number(pound) / 2000
+  let num = Number(pound) / 2000;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertKilogramToGram = kilogram => {
-  let num = Number(kilogram) * 1000
+  let num = Number(kilogram) * 1000;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertKilogramToOunce = kilogram => {
-  let num = Number(kilogram) * 35.274
+  let num = Number(kilogram) * 35.274;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertKilogramToTon = kilogram => {
-  let num = Number(kilogram) / 907.185
+  let num = Number(kilogram) / 907.185;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertKilogramToPound = kilogram => {
-  let num = Number(kilogram) * 2.205
+  let num = Number(kilogram) * 2.205;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertGramToOunce = gram => {
-  let num = Number(gram) / 28.35
+  let num = Number(gram) / 28.35;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertGramToTon = gram => {
-  let num = Number(gram) / 907184.74
+  let num = Number(gram) / 907184.74;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertGramToKilogram = gram => {
-  let num = Number(gram) / 1000
+  let num = Number(gram) / 1000;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertGramToPound = gram => {
-  let num = Number(gram) / 453.592
+  let num = Number(gram) / 453.592;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertOunceToTon = ounce => {
-  let num = Number(ounce) / 32000
+  let num = Number(ounce) / 32000;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertOunceToGram = ounce => {
-  let num = Number(ounce) * 28.35
+  let num = Number(ounce) * 28.35;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertOunceToKilogram = ounce => {
-  let num = Number(ounce) / 35.274
+  let num = Number(ounce) / 35.274;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertOunceToPound = ounce => {
-  let num = Number(ounce) / 16
+  let num = Number(ounce) / 16;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertTonToGram = ton => {
-  let num = Number(ton) * 907184.74
+  let num = Number(ton) * 907184.74;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertTonToPound = ton => {
-  let num = Number(ton) * 2000
+  let num = Number(ton) * 2000;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertTonToKilogram = ton => {
-  let num = Number(ton) * 907.185
+  let num = Number(ton) * 907.185;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertTonToOunce = ton => {
-  let num = Number(ton) * 32000
+  let num = Number(ton) * 32000;
   return Math.round(num * 100) / 100;
-}
-
+};
 
 const Weight = () => {
-  const[pound, setPound] = useState()
-  const[ounce, setOunce] = useState()
-  const[ton, setTon] = useState()
-  const[gram, setGram] = useState()
-  const[kilogram, setKilogram] = useState()
+  const [pound, setPound] = useState();
+  const [ounce, setOunce] = useState();
+  const [ton, setTon] = useState();
+  const [gram, setGram] = useState();
+  const [kilogram, setKilogram] = useState();
   const classes = useStyles();
 
   const handlePoundChange = event => {
-    let x = event.target.value
-    setPound(x)
-    setKilogram(convertPoundToKilogram(x))
-    setOunce(convertPoundToOunce(x))
-    setGram(convertPoundToGram(x))
-    setTon(convertPoundToTon(x))
-  }
+    let x = event.target.value;
+    setPound(x);
+    setKilogram(convertPoundToKilogram(x));
+    setOunce(convertPoundToOunce(x));
+    setGram(convertPoundToGram(x));
+    setTon(convertPoundToTon(x));
+  };
 
   const handleKilogramChange = event => {
-    let value = event.target.value
-    setKilogram(value)
-    setPound(convertKilogramToPound(value))
-    setGram(convertKilogramToGram(value))
-    setOunce(convertKilogramToOunce(value))
-    setTon(convertKilogramToTon(value))
-  }
+    let value = event.target.value;
+    setKilogram(value);
+    setPound(convertKilogramToPound(value));
+    setGram(convertKilogramToGram(value));
+    setOunce(convertKilogramToOunce(value));
+    setTon(convertKilogramToTon(value));
+  };
 
   const handleGramChange = event => {
-    let value = event.target.value
-    setGram(value)
-    setPound(convertGramToPound(value))
-    setKilogram(convertGramToKilogram(value))
-    setOunce(convertGramToOunce(value))
-    setTon(convertGramToTon(value))
-  }
+    let value = event.target.value;
+    setGram(value);
+    setPound(convertGramToPound(value));
+    setKilogram(convertGramToKilogram(value));
+    setOunce(convertGramToOunce(value));
+    setTon(convertGramToTon(value));
+  };
 
   const handleOunceChange = event => {
-    let value = event.target.value
-    setOunce(value)
-    setPound(convertOunceToPound(value))
-    setTon(convertOunceToTon(value))
-    setGram(convertOunceToGram(value))
-    setKilogram(convertOunceToKilogram(value))
-  }
+    let value = event.target.value;
+    setOunce(value);
+    setPound(convertOunceToPound(value));
+    setTon(convertOunceToTon(value));
+    setGram(convertOunceToGram(value));
+    setKilogram(convertOunceToKilogram(value));
+  };
 
   const handleTonChange = event => {
-    let value = event.target.value
-    setTon(value)
-    setPound(convertTonToPound(value))
-    setGram(convertTonToGram(value))
-    setOunce(convertTonToOunce(value))
-    setKilogram(convertTonToKilogram(value))
-  }
+    let value = event.target.value;
+    setTon(value);
+    setPound(convertTonToPound(value));
+    setGram(convertTonToGram(value));
+    setOunce(convertTonToOunce(value));
+    setKilogram(convertTonToKilogram(value));
+  };
 
   return (
     <div className={classes.weightDiv}>

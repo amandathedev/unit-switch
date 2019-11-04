@@ -35,39 +35,39 @@ const styles = {
     marginRight: "15px"
   },
   mileInput: {
-    backgroundColor: "#4ce44c"
+    backgroundColor: "#3AB270"
   },
   kmInput: {
-    backgroundColor: "#90EE90"
+    backgroundColor: "#67C897"
   }
 };
 
 const convertKmhToMph = kmh => {
-  let num = Number(kmh) / 1.609
+  let num = Number(kmh) / 1.609;
   return Math.round(num * 100) / 100;
-}
+};
 
 const convertMphToKmh = mph => {
-  let num = Number(mph) * 1.609
+  let num = Number(mph) * 1.609;
   return Math.round(num * 100) / 100;
-}
+};
 
 const Speed = () => {
-  const[mph, setMph] = useState();
-  const[kmh, setKmh] = useState();
+  const [mph, setMph] = useState();
+  const [kmh, setKmh] = useState();
   const classes = useStyles();
 
   const handleMphChange = event => {
-    let value = event.target.value
-    setMph(value)
-    setKmh(convertMphToKmh(value))
-  }
+    let value = event.target.value;
+    setMph(value);
+    setKmh(convertMphToKmh(value));
+  };
 
   const handleKmhChange = event => {
-    let value = event.target.value
-    setKmh(value)
-    setMph(convertKmhToMph(value))
-  }
+    let value = event.target.value;
+    setKmh(value);
+    setMph(convertKmhToMph(value));
+  };
 
   return (
     <div className={classes.speedDiv}>

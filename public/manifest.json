@@ -2,12 +2,17 @@
   "manifest_version": 2,
 
   "name": "UnitSwitch",
-  "description": "Super awesome unit converter",
-  "version": "0.0.1",
+  "description": "Convert between many different units quickly and easily without leaving the current page.",
+  "version": "1.0",
 
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "UnitSwitch"
+  },
+  "icons": {
+    "16": "logo-small.png",
+    "48": "logo-small.png",
+    "128": "logo-small.png"
   },
   "content_security_policy": "script-src 'self' 'sha256-wkEhk1Pm58HZQSzT/oPAcIeUYSsJpEEGo2v2M1aGgTs='; object-src 'self'",
   "permissions": []

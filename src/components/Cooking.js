@@ -35,25 +35,32 @@ const styles = {
     marginRight: "15px"
   },
   gallonInput: {
-    backgroundColor: "#953efc"
+    // backgroundColor: "#953efc"
+    backgroundColor: "#a64ca6"
   },
   literInput: {
-    backgroundColor: "#9f51fc"
+    // backgroundColor: "#9f51fc"
+    backgroundColor: "#b266b2"
   },
   pintInput: {
-    backgroundColor: "#b478fd"
+    // backgroundColor: "#b478fd"
+    backgroundColor: "#bf7fbf"
   },
   quartInput: {
-    backgroundColor: "#bf8bfd"
+    // backgroundColor: "#bf8bfd"
+    backgroundColor: "#cc99cc"
   },
   cupInput: {
-    backgroundColor: "#ca9efd"
+    // backgroundColor: "#ca9efd"
+    backgroundColor: "#d8b2d8"
   },
   tbspInput: {
-    backgroundColor: "#d4b2fe"
+    // backgroundColor: "#d4b2fe"
+    backgroundColor: "#e5cce5"
   },
   tspInput: {
-    backgroundColor: "#dfc5fe",
+    // backgroundColor: "#dfc5fe",
+    backgroundColor: "#f2e5f2",
     marginBottom: "1em"
   }
 };

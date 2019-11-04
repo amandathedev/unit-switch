@@ -35,13 +35,13 @@ const styles = {
     marginRight: "15px"
   },
   Cinput: {
-    backgroundColor: "#ff7a7a"
+    backgroundColor: "#E3534C"
   },
   Finput: {
-    backgroundColor: "#ffa1a1"
+    backgroundColor: "#FA7C5A"
   },
   Kinput: {
-    backgroundColor: "#ffc8c8",
+    backgroundColor: "#FFA874",
     marginBottom: "1em"
   }
 };
