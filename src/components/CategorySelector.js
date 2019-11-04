@@ -20,7 +20,7 @@ const CategorySelector = () => {
     case "speed":
       return <Speed />;
     case "cooking":
-      return <Cooking />;
+      return <Cooking setDisplaying={setDisplaying} />;
     default:
       return <ButtonGroup setDisplaying={setDisplaying} />;
   }
