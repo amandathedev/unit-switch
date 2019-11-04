@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "700",
     width: "14em",
     margin: theme.spacing(1),
-    paddingLeft: "1em"
+    paddingLeft: "1em",
+    borderRadius: "10px"
   },
   title: {
     color: "white",
@@ -71,18 +72,16 @@ const convertKelvinToFarenheit = kelvin => {
 };
 
 const convertKelvinToCelsius = kelvin => {
-  let num = kelvin - 273.15
-  return Math.round(num * 100) / 100
-}
+  let num = kelvin - 273.15;
+  return Math.round(num * 100) / 100;
+};
 
-const handleCelsiusChange = (event) => {
-
-}
+const handleCelsiusChange = event => {};
 
 const Temperature = () => {
-  const[celsius, setCelsiuis] = useState("")
-  const[kelvin, setKelvin] = useState("")
-  const[farenheit, setFarenheit] = useState("")
+  const [celsius, setCelsiuis] = useState("");
+  const [kelvin, setKelvin] = useState("");
+  const [farenheit, setFarenheit] = useState("");
   const classes = useStyles();
   return (
     <div className={classes.tempDiv}>

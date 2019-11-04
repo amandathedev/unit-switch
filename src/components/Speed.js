@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "700",
     width: "14em",
     margin: theme.spacing(1),
-    paddingLeft: "1em"
+    paddingLeft: "1em",
+    borderRadius: "10px"
   },
   title: {
     color: "white",
@@ -50,6 +51,7 @@ const Speed = () => {
       {/* mph */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.mileInput}
         startAdornment={
@@ -65,6 +67,7 @@ const Speed = () => {
       {/* km/h */}
       <Input
         id="standard-adornment-weight"
+        type="number"
         className={classes.inputBoxes}
         style={styles.kmInput}
         startAdornment={
