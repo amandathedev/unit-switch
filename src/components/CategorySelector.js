@@ -12,13 +12,13 @@ const CategorySelector = () => {
 
   switch (displaying) {
     case "temperature":
-      return <Temperature />;
+      return <Temperature setDisplaying={setDisplaying} />;
     case "length":
-      return <Length />;
+      return <Length setDisplaying={setDisplaying} />;
     case "weight":
-      return <Weight />;
+      return <Weight setDisplaying={setDisplaying} />;
     case "speed":
-      return <Speed />;
+      return <Speed setDisplaying={setDisplaying} />;
     case "cooking":
       return <Cooking setDisplaying={setDisplaying} />;
     default:

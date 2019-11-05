@@ -3,9 +3,18 @@ import { useState } from "react";
 import { Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
 const useStyles = makeStyles(theme => ({
+  button: {
+    // margin: theme.spacing(1),
+    width: "16em",
+    fontWeight: "700",
+    borderRadius: "10px"
+    // height: "30px",
+    // paddingBottom: "2.2em"
+  },
   speedDiv: {
     backgroundColor: "#282828",
     width: "21em"
@@ -39,6 +48,13 @@ const styles = {
   },
   kmInput: {
     backgroundColor: "#67C897"
+  },
+  backButton: {
+    backgroundColor: "#282828",
+    color: "#92d8b5"
+    // marinBottom: "1em"
+    // paddingTop: "0",
+    // paddingBottom: "5em"
   }
 };
 
@@ -52,7 +68,7 @@ const convertMphToKmh = mph => {
   return Math.round(num * 100) / 100;
 };
 
-const Speed = () => {
+const Speed = props => {
   const [mph, setMph] = useState();
   const [kmh, setKmh] = useState();
   const classes = useStyles();
@@ -110,6 +126,14 @@ const Speed = () => {
           "aria-label": "weight"
         }}
       />
+      <Button
+        // variant="contained"
+        className={classes.button}
+        style={styles.backButton}
+        onClick={() => props.setDisplaying("")}
+      >
+        <i class="fas fa-long-arrow-alt-left fa-3x"></i>
+      </Button>
     </div>
   );
 };

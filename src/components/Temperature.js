@@ -3,9 +3,18 @@ import { useState } from "react";
 import { Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
 const useStyles = makeStyles(theme => ({
+  button: {
+    // margin: theme.spacing(1),
+    width: "16em",
+    fontWeight: "700",
+    borderRadius: "10px"
+    // height: "30px",
+    // paddingBottom: "2.2em"
+  },
   tempDiv: {
     backgroundColor: "#282828",
     width: "21em"
@@ -43,6 +52,13 @@ const styles = {
   Kinput: {
     backgroundColor: "#FFA874",
     marginBottom: "1em"
+  },
+  backButton: {
+    backgroundColor: "#282828",
+    color: "#ffcdaf"
+    // marinBottom: "1em"
+    // paddingTop: "0",
+    // paddingBottom: "5em"
   }
 };
 
@@ -76,7 +92,7 @@ const convertKelvinToCelsius = kelvin => {
   return Math.round(num * 100) / 100;
 };
 
-const Temperature = () => {
+const Temperature = props => {
   const [celsius, setCelsius] = useState();
   const [kelvin, setKelvin] = useState();
   const [fahrenheit, setFahrenheit] = useState();
@@ -162,6 +178,14 @@ const Temperature = () => {
           "aria-label": "weight"
         }}
       />
+      <Button
+        // variant="contained"
+        className={classes.button}
+        style={styles.backButton}
+        onClick={() => props.setDisplaying("")}
+      >
+        <i class="fas fa-long-arrow-alt-left fa-3x"></i>
+      </Button>
     </div>
   );
 };

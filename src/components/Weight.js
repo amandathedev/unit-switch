@@ -3,9 +3,18 @@ import { useState } from "react";
 import { Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
 const useStyles = makeStyles(theme => ({
+  button: {
+    // margin: theme.spacing(1),
+    width: "16em",
+    fontWeight: "700",
+    borderRadius: "10px"
+    // height: "30px",
+    // paddingBottom: "2.2em"
+  },
   weightDiv: {
     backgroundColor: "#282828",
     width: "21em"
@@ -53,6 +62,13 @@ const styles = {
     // backgroundColor: "#fffcdd",
     backgroundColor: "#FFFFB7",
     marginBottom: "1em"
+  },
+  backButton: {
+    backgroundColor: "#282828",
+    color: "#ffffde"
+    // marinBottom: "1em"
+    // paddingTop: "0",
+    // paddingBottom: "5em"
   }
 };
 
@@ -156,7 +172,7 @@ const convertTonToOunce = ton => {
   return Math.round(num * 100) / 100;
 };
 
-const Weight = () => {
+const Weight = props => {
   const [pound, setPound] = useState();
   const [ounce, setOunce] = useState();
   const [ton, setTon] = useState();
@@ -304,6 +320,14 @@ const Weight = () => {
           "aria-label": "weight"
         }}
       />
+      <Button
+        // variant="contained"
+        className={classes.button}
+        style={styles.backButton}
+        onClick={() => props.setDisplaying("")}
+      >
+        <i class="fas fa-long-arrow-alt-left fa-3x"></i>
+      </Button>
     </div>
   );
 };
