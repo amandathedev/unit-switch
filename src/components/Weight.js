@@ -65,8 +65,8 @@ const styles = {
   },
   backButton: {
     backgroundColor: "#282828",
-    color: "#ffffde"
-    // marinBottom: "1em"
+    color: "#ffffde",
+    marginBottom: "0.4em"
     // paddingTop: "0",
     // paddingBottom: "5em"
   }
