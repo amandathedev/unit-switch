@@ -12,8 +12,6 @@ const useStyles = makeStyles(theme => ({
     width: "16em",
     fontWeight: "700",
     borderRadius: "10px"
-    // height: "30px",
-    // paddingBottom: "2.2em"
   },
   weightDiv: {
     backgroundColor: "#282828",
@@ -24,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "700",
     width: "14em",
     margin: theme.spacing(1),
-    paddingLeft: "1em"
+    paddingLeft: "1em",
+    borderRadius: "10px"
   },
   title: {
     color: "white",
@@ -43,31 +42,24 @@ const styles = {
     marginRight: "15px"
   },
   poundInput: {
-    // backgroundColor: "#ffed19"
     backgroundColor: "#FFD400"
   },
   kgInput: {
-    // backgroundColor: "#fff154"
     backgroundColor: "#FFDD3C"
   },
   ozInput: {
-    // backgroundColor: "#FFF68F"
     backgroundColor: "#FFEA61"
   },
   gramInput: {
-    // backgroundColor: "#fff9b6"
     backgroundColor: "#FFF192"
   },
   tonInput: {
-    // backgroundColor: "#fffcdd",
     backgroundColor: "#FFFFB7"
   },
   backButton: {
     backgroundColor: "#282828",
     color: "#ffffde",
     marginBottom: "0.4em"
-    // paddingTop: "0",
-    // paddingBottom: "5em"
   }
 };
 
