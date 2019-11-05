@@ -50,8 +50,7 @@ const styles = {
     backgroundColor: "#FA7C5A"
   },
   Kinput: {
-    backgroundColor: "#FFA874",
-    marginBottom: "1em"
+    backgroundColor: "#FFA874"
   },
   backButton: {
     backgroundColor: "#282828",

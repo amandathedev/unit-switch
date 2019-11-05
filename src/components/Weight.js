@@ -60,8 +60,7 @@ const styles = {
   },
   tonInput: {
     // backgroundColor: "#fffcdd",
-    backgroundColor: "#FFFFB7",
-    marginBottom: "1em"
+    backgroundColor: "#FFFFB7"
   },
   backButton: {
     backgroundColor: "#282828",

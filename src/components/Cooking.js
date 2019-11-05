@@ -70,7 +70,6 @@ const styles = {
   tspInput: {
     // backgroundColor: "#dfc5fe",
     backgroundColor: "#f2e5f2"
-    // marginBottom: "1em"
   },
   backButton: {
     backgroundColor: "#282828",

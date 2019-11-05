@@ -59,8 +59,7 @@ const styles = {
     backgroundColor: "#8ee5ee"
   },
   cmInput: {
-    backgroundColor: "#b0edf3",
-    marginBottom: "1em"
+    backgroundColor: "#b0edf3"
   },
   backButton: {
     backgroundColor: "#282828",
