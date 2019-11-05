@@ -8,12 +8,9 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 
 const useStyles = makeStyles(theme => ({
   button: {
-    // margin: theme.spacing(1),
     width: "16em",
     fontWeight: "700",
     borderRadius: "10px"
-    // height: "30px",
-    // paddingBottom: "2.2em"
   },
   cookingDiv: {
     backgroundColor: "#282828",
@@ -44,39 +41,30 @@ const styles = {
     marginRight: "15px"
   },
   gallonInput: {
-    // backgroundColor: "#953efc"
     backgroundColor: "#a64ca6"
   },
   literInput: {
-    // backgroundColor: "#9f51fc"
     backgroundColor: "#b266b2"
   },
   pintInput: {
-    // backgroundColor: "#b478fd"
     backgroundColor: "#bf7fbf"
   },
   quartInput: {
-    // backgroundColor: "#bf8bfd"
     backgroundColor: "#cc99cc"
   },
   cupInput: {
-    // backgroundColor: "#ca9efd"
     backgroundColor: "#d8b2d8"
   },
   tbspInput: {
-    // backgroundColor: "#d4b2fe"
     backgroundColor: "#e5cce5"
   },
   tspInput: {
-    // backgroundColor: "#dfc5fe",
     backgroundColor: "#f2e5f2"
   },
   backButton: {
     backgroundColor: "#282828",
     color: "#f9f2f9",
     marginBottom: "0.4em"
-    // paddingTop: "0",
-    // paddingBottom: "5em"
   }
 };
 
@@ -382,7 +370,7 @@ const Cooking = props => {
       <Typography variant="h4" className={classes.title}>
         <i class="fas fa-utensils" style={styles.icon}></i>Cooking
       </Typography>
-      {/* gallon */}
+      {/* Gallon */}
       <Input
         id="standard-adornment-weight"
         type="number"
@@ -400,7 +388,7 @@ const Cooking = props => {
           "aria-label": "weight"
         }}
       />
-      {/* liter */}
+      {/* Liter */}
       <Input
         id="standard-adornment-weight"
         type="number"
@@ -418,7 +406,7 @@ const Cooking = props => {
           "aria-label": "weight"
         }}
       />
-      {/* pint */}
+      {/* Pint */}
       <Input
         id="standard-adornment-weight"
         type="number"
@@ -436,7 +424,7 @@ const Cooking = props => {
           "aria-label": "weight"
         }}
       />
-      {/* quart */}
+      {/* Quart */}
       <Input
         id="standard-adornment-weight"
         type="number"
@@ -509,7 +497,6 @@ const Cooking = props => {
         }}
       />
       <Button
-        // variant="contained"
         className={classes.button}
         style={styles.backButton}
         onClick={() => props.setDisplaying("")}

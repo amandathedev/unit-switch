@@ -90,7 +90,7 @@ const Speed = props => {
       <Typography variant="h4" className={classes.title}>
         <i class="fas fa-tachometer-alt" style={styles.icon}></i>Speed
       </Typography>
-      {/* mph */}
+      {/* Mph */}
       <Input
         id="standard-adornment-weight"
         type="number"
@@ -108,7 +108,7 @@ const Speed = props => {
           "aria-label": "weight"
         }}
       />
-      {/* km/h */}
+      {/* Km/h */}
       <Input
         id="standard-adornment-weight"
         type="number"
@@ -127,7 +127,6 @@ const Speed = props => {
         }}
       />
       <Button
-        // variant="contained"
         className={classes.button}
         style={styles.backButton}
         onClick={() => props.setDisplaying("")}

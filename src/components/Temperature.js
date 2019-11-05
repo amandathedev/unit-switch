@@ -12,8 +12,6 @@ const useStyles = makeStyles(theme => ({
     width: "16em",
     fontWeight: "700",
     borderRadius: "10px"
-    // height: "30px",
-    // paddingBottom: "2.2em"
   },
   tempDiv: {
     backgroundColor: "#282828",
@@ -178,7 +176,6 @@ const Temperature = props => {
         }}
       />
       <Button
-        // variant="contained"
         className={classes.button}
         style={styles.backButton}
         onClick={() => props.setDisplaying("")}

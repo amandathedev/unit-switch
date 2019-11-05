@@ -312,7 +312,6 @@ const Weight = props => {
         }}
       />
       <Button
-        // variant="contained"
         className={classes.button}
         style={styles.backButton}
         onClick={() => props.setDisplaying("")}
