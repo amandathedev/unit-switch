@@ -2,6 +2,8 @@
 
 Convert between many different units quickly and easily without leaving the current page.
 
+![Demo Image](demo-large.png)
+
 ## Installation
 
 Clone this repository to your local environment. Run the following command:
