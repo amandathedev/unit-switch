@@ -1,11 +1,9 @@
 {
-  "manifest_version": 2,
-
+  "manifest_version": 3,
   "name": "UnitSwitch",
+  "version": "2.0",
   "description": "Convert between units quickly without leaving the current tab.",
-  "version": "1.1",
-
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "UnitSwitch"
   },
@@ -14,6 +12,8 @@
     "48": "logo-48.png",
     "128": "logo-128.png"
   },
-  "content_security_policy": "script-src 'self' 'sha256-wkEhk1Pm58HZQSzT/oPAcIeUYSsJpEEGo2v2M1aGgTs='; object-src 'self'",
-  "permissions": []
+  "permissions": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }

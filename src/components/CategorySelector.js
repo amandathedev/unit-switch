@@ -1,29 +1,36 @@
-import React from "react";
-import { useState } from "react";
-import Temperature from "./Temperature";
-import Weight from "./Weight";
-import Speed from "./Speed";
-import Length from "./Length";
-import Cooking from "./Cooking";
-import ButtonGroup from "./ButtonGroup";
+import React, { useState } from 'react';
+import ButtonGroup from './ButtonGroup';
+import Temperature from './Temperature';
+import Length from './Length';
+import Weight from './Weight';
+import Speed from './Speed';
+import Cooking from './Cooking';
 
 const CategorySelector = () => {
-  const [displaying, setDisplaying] = useState("");
+  const [displaying, setDisplaying] = useState('');
 
-  switch (displaying) {
-    case "temperature":
-      return <Temperature setDisplaying={setDisplaying} />;
-    case "length":
-      return <Length setDisplaying={setDisplaying} />;
-    case "weight":
-      return <Weight setDisplaying={setDisplaying} />;
-    case "speed":
-      return <Speed setDisplaying={setDisplaying} />;
-    case "cooking":
-      return <Cooking setDisplaying={setDisplaying} />;
-    default:
-      return <ButtonGroup setDisplaying={setDisplaying} />;
-  }
+  const renderComponent = () => {
+    switch (displaying) {
+      case 'temperature':
+        return <Temperature setDisplaying={setDisplaying} />;
+      case 'length':
+        return <Length setDisplaying={setDisplaying} />;
+      case 'weight':
+        return <Weight setDisplaying={setDisplaying} />;
+      case 'speed':
+        return <Speed setDisplaying={setDisplaying} />;
+      case 'cooking':
+        return <Cooking setDisplaying={setDisplaying} />;
+      default:
+        return <ButtonGroup setDisplaying={setDisplaying} />;
+    }
+  };
+
+  return (
+    <div>
+      {renderComponent()}
+    </div>
+  );
 };
 
 export default CategorySelector;
