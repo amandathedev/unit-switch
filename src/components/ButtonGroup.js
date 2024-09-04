@@ -1,108 +1,85 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import { Typography } from "@material-ui/core";
+import React from 'react';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import ThermostatIcon from '@mui/icons-material/WbSunny';
+import StraightenIcon from '@mui/icons-material/Straighten';
+import SpeedIcon from '@mui/icons-material/Speed';
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import ScaleIcon from '@mui/icons-material/Balance';
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1),
-    width: "16em",
-    fontWeight: "700",
-    borderRadius: "10px",
-    height: "30px",
-    paddingBottom: "2.2em"
-  },
-  categoryDiv: {
-    backgroundColor: "#282828",
-    width: "21em"
-  },
-  title: {
-    color: "white",
-    fontWeight: "300",
-    paddingTop: "0.4em",
-    marginBottom: "0.2em"
-  }
-}));
-
-const styles = {
-  buttonTemp: {
-    backgroundColor: "#C74BF6"
-  },
-  buttonLength: {
-    backgroundColor: "#9A75F0"
-  },
-  buttonWeight: {
-    backgroundColor: "#6E9EEB"
-  },
-  buttonSpeed: {
-    backgroundColor: "#41C8E5"
-  },
-  buttonCook: {
-    backgroundColor: "#14F2E0",
-    marginBottom: "1em"
-  },
-  icon: {
-    marginRight: "5px"
-  },
-  bigIcon: {
-    marginRight: "15px",
-    fontSize: "0.8em"
-  }
-};
-
-const ButtonGroup = props => {
-  const classes = useStyles();
-
+const ButtonGroup = (props) => {
   return (
-    <div className={classes.categoryDiv}>
-      <Typography variant="h4" className={classes.title}>
-        <i class="fas fa-sync" style={styles.bigIcon}></i>UnitSwitch
+    <Box sx={{ backgroundColor: '#282828', padding: 2, width: '21em', borderRadius: '8px' }}>
+      <Typography variant="h4" sx={{ color: 'white', fontWeight: 300, fontSize: '1.5em', marginBottom: '0.2em', textAlign: 'center' }}>
+        UnitSwitch
       </Typography>
+
       <Button
         variant="contained"
-        className={classes.button}
-        style={styles.buttonTemp}
-        onClick={() => props.setDisplaying("temperature")}
+        fullWidth
+        sx={{
+          margin: '0.5em 0', backgroundColor: '#C74BF6', color: 'black', fontWeight: 700,
+          borderRadius: '10px', height: '60px', fontSize: '1.1em'
+        }}
+        startIcon={<ThermostatIcon sx={{ fontSize: '1.5em' }} />}
+        onClick={() => props.setDisplaying('temperature')}
       >
-        <i class="fas fa-thermometer-half" style={styles.icon}></i> Temperature
+        Temperature
       </Button>
+
       <Button
         variant="contained"
-        className={classes.button}
-        style={styles.buttonLength}
-        onClick={() => props.setDisplaying("length")}
+        fullWidth
+        sx={{
+          margin: '0.5em 0', backgroundColor: '#9A75F0', color: 'black', fontWeight: 700,
+          borderRadius: '10px', height: '60px', fontSize: '1.1em'
+        }}
+        startIcon={<StraightenIcon sx={{ fontSize: '1.5em' }} />}
+        onClick={() => props.setDisplaying('length')}
       >
-        <i class="fas fa-ruler" style={styles.icon}></i>
         Length
       </Button>
+
       <Button
         variant="contained"
-        className={classes.button}
-        style={styles.buttonWeight}
-        onClick={() => props.setDisplaying("weight")}
+        fullWidth
+        sx={{
+          margin: '0.5em 0', backgroundColor: '#6E9EEB', color: 'black', fontWeight: 700,
+          borderRadius: '10px', height: '60px', fontSize: '1.1em'
+        }}
+        startIcon={<ScaleIcon sx={{ fontSize: '1.5em' }} />}
+        onClick={() => props.setDisplaying('weight')}
       >
-        <i class="fas fa-balance-scale-left" style={styles.icon}></i>
         Weight
       </Button>
+
       <Button
         variant="contained"
-        className={classes.button}
-        style={styles.buttonSpeed}
-        onClick={() => props.setDisplaying("speed")}
+        fullWidth
+        sx={{
+          margin: '0.5em 0', backgroundColor: '#41C8E5', color: 'black', fontWeight: 700,
+          borderRadius: '10px', height: '60px', fontSize: '1.1em'
+        }}
+        startIcon={<SpeedIcon sx={{ fontSize: '1.5em' }} />}
+        onClick={() => props.setDisplaying('speed')}
       >
-        <i class="fas fa-tachometer-alt" style={styles.icon}></i>
         Speed
       </Button>
+
       <Button
         variant="contained"
-        className={classes.button}
-        style={styles.buttonCook}
-        onClick={() => props.setDisplaying("cooking")}
+        fullWidth
+        sx={{
+          margin: '0.5em 0', backgroundColor: '#14F2E0', color: 'black', fontWeight: 700,
+          borderRadius: '10px', height: '60px', fontSize: '1.1em'
+        }}
+        startIcon={<RestaurantMenuIcon sx={{ fontSize: '1.5em' }} />}
+        onClick={() => props.setDisplaying('cooking')}
       >
-        <i class="fas fa-utensils" style={styles.icon}></i>
         Cooking
       </Button>
-    </div>
+    </Box>
   );
 };
 

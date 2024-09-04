@@ -1,98 +1,87 @@
-import React from "react";
-import { useState } from "react";
-import { Input } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import InputAdornment from "@material-ui/core/InputAdornment";
+import React, { useState } from "react";
+import { Input, Typography, Button, InputAdornment, Box } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   button: {
-    // margin: theme.spacing(1),
     width: "16em",
     fontWeight: "700",
-    borderRadius: "10px"
-    // height: "30px",
-    // paddingBottom: "2.2em"
+    borderRadius: "10px",
   },
   speedDiv: {
     backgroundColor: "#282828",
-    width: "21em"
+    width: "21em",
   },
   inputBoxes: {
     color: "black",
     fontWeight: "700",
     width: "14em",
-    margin: theme.spacing(1),
+    margin: "8px",
     paddingLeft: "1em",
-    borderRadius: "10px"
+    borderRadius: "10px",
   },
   title: {
     color: "white",
     fontWeight: "300",
     paddingTop: "0.4em",
-    marginBottom: "0.4em"
+    marginBottom: "0.4em",
   },
   adornment: {
-    marginRight: "1em"
-  }
+    marginRight: "1em",
+  },
 }));
 
 // Green
 const styles = {
   icon: {
-    marginRight: "15px"
+    marginRight: "15px",
   },
   mileInput: {
-    backgroundColor: "#3AB270"
+    backgroundColor: "#3AB270",
   },
   kmInput: {
-    backgroundColor: "#67C897"
+    backgroundColor: "#67C897",
   },
   backButton: {
     backgroundColor: "#282828",
     color: "#92d8b5",
-    marginBottom: "0.4em"
-    // paddingTop: "0",
-    // paddingBottom: "5em"
-  }
+    marginBottom: "0.4em",
+  },
 };
 
-const convertKmhToMph = kmh => {
+const convertKmhToMph = (kmh) => {
   let num = Number(kmh) / 1.609;
   return Math.round(num * 100) / 100;
 };
 
-const convertMphToKmh = mph => {
+const convertMphToKmh = (mph) => {
   let num = Number(mph) * 1.609;
   return Math.round(num * 100) / 100;
 };
 
-const Speed = props => {
-  const [mph, setMph] = useState();
-  const [kmh, setKmh] = useState();
+const Speed = ({ setDisplaying }) => {
+  const [mph, setMph] = useState("");
+  const [kmh, setKmh] = useState("");
   const classes = useStyles();
 
-  const handleMphChange = event => {
+  const handleMphChange = (event) => {
     let value = event.target.value;
     setMph(value);
     setKmh(convertMphToKmh(value));
   };
 
-  const handleKmhChange = event => {
+  const handleKmhChange = (event) => {
     let value = event.target.value;
     setKmh(value);
     setMph(convertKmhToMph(value));
   };
 
   return (
-    <div className={classes.speedDiv}>
+    <Box className={classes.speedDiv}>
       <Typography variant="h4" className={classes.title}>
-        <i class="fas fa-tachometer-alt" style={styles.icon}></i>Speed
+        <i className="fas fa-tachometer-alt" style={styles.icon}></i>Speed
       </Typography>
-      {/* mph */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.mileInput}
@@ -105,12 +94,10 @@ const Speed = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
-      {/* km/h */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.kmInput}
@@ -123,18 +110,17 @@ const Speed = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
       <Button
-        // variant="contained"
         className={classes.button}
         style={styles.backButton}
-        onClick={() => props.setDisplaying("")}
+        onClick={() => setDisplaying("")}
       >
-        <i class="fas fa-long-arrow-alt-left fa-3x"></i>
+        <i className="fas fa-long-arrow-alt-left fa-3x"></i>
       </Button>
-    </div>
+    </Box>
   );
 };
 

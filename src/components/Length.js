@@ -1,226 +1,217 @@
-import React from "react";
-import { Input } from "@material-ui/core";
-import { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import InputAdornment from "@material-ui/core/InputAdornment";
+import React, { useState } from 'react';
+import { Input, Typography, Button, InputAdornment, Box } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   button: {
-    // margin: theme.spacing(1),
     width: "16em",
     fontWeight: "700",
-    borderRadius: "10px"
-    // height: "30px",
-    // paddingBottom: "2.2em"
+    borderRadius: "10px",
   },
   tempDiv: {
     backgroundColor: "#282828",
-    width: "21em"
+    width: "21em",
   },
   inputBoxes: {
     color: "black",
     fontWeight: "700",
     width: "14em",
-    margin: theme.spacing(1),
+    margin: "8px",
     paddingLeft: "1em",
-    borderRadius: "10px"
+    borderRadius: "10px",
   },
   title: {
     color: "white",
     fontWeight: "300",
     paddingTop: "0.4em",
-    marginBottom: "0.4em"
+    marginBottom: "0.4em",
   },
   adornment: {
-    marginRight: "1em"
-  }
+    marginRight: "1em",
+  },
 }));
 
 // Blue
 const styles = {
   icon: {
-    marginRight: "15px"
+    marginRight: "15px",
   },
   mileInput: {
-    backgroundColor: "#1ba3b1"
+    backgroundColor: "#1ba3b1",
   },
   footInput: {
-    backgroundColor: "#20c2d3"
+    backgroundColor: "#20c2d3",
   },
   inchInput: {
-    backgroundColor: "#39d1e1"
+    backgroundColor: "#39d1e1",
   },
   kmInput: {
-    backgroundColor: "#6cdde9"
+    backgroundColor: "#6cdde9",
   },
   meterInput: {
-    backgroundColor: "#8ee5ee"
+    backgroundColor: "#8ee5ee",
   },
   cmInput: {
-    backgroundColor: "#b0edf3"
+    backgroundColor: "#b0edf3",
   },
   backButton: {
     backgroundColor: "#282828",
     color: "#d2f5f8",
-    marginBottom: "0.4em"
-    // paddingTop: "0",
-    // paddingBottom: "5em"
-  }
+    marginBottom: "0.4em",
+  },
 };
 
-const convertMileToFoot = mile => {
+const convertMileToFoot = (mile) => {
   let num = Number(mile) * 5280;
   return Math.round(num * 100) / 100;
 };
 
-const convertMileToInch = mile => {
+const convertMileToInch = (mile) => {
   let num = Number(mile) * 63360;
   return Math.round(num * 100) / 100;
 };
 
-const convertMileToKilometer = mile => {
+const convertMileToKilometer = (mile) => {
   let num = Number(mile) * 1.609;
   return Math.round(num * 100) / 100;
 };
 
-const convertMileToMeter = mile => {
+const convertMileToMeter = (mile) => {
   let num = Number(mile) * 1609.344;
   return Math.round(num * 100) / 100;
 };
 
-const convertMileToCentimeter = mile => {
+const convertMileToCentimeter = (mile) => {
   let num = Number(mile) * 160934.4;
   return Math.round(num * 100) / 100;
 };
 
-const convertFootToMile = foot => {
+const convertFootToMile = (foot) => {
   let num = Number(foot) / 5280;
   return Math.round(num * 100) / 100;
 };
 
-const convertFootToInch = foot => {
+const convertFootToInch = (foot) => {
   let num = Number(foot) * 12;
   return Math.round(num * 100) / 100;
 };
 
-const convertFootToKilometer = foot => {
+const convertFootToKilometer = (foot) => {
   let num = Number(foot) / 3280.84;
   return Math.round(num * 100) / 100;
 };
 
-const convertFootToMeter = foot => {
+const convertFootToMeter = (foot) => {
   let num = Number(foot) / 3.281;
   return Math.round(num * 100) / 100;
 };
 
-const convertFootToCentimeter = foot => {
+const convertFootToCentimeter = (foot) => {
   let num = Number(foot) * 30.48;
   return Math.round(num * 100) / 100;
 };
 
-const convertInchToMile = inch => {
+const convertInchToMile = (inch) => {
   let num = Number(inch) / 63360;
   return Math.round(num * 100) / 100;
 };
 
-const convertInchToFoot = inch => {
+const convertInchToFoot = (inch) => {
   let num = Number(inch) / 12;
   return Math.round(num * 100) / 100;
 };
 
-const convertInchToKilometer = inch => {
+const convertInchToKilometer = (inch) => {
   let num = Number(inch) / 39370.079;
   return Math.round(num * 100) / 100;
 };
 
-const convertInchToMeter = inch => {
+const convertInchToMeter = (inch) => {
   let num = Number(inch) / 39.37;
   return Math.round(num * 100) / 100;
 };
 
-const convertInchToCentimeter = inch => {
+const convertInchToCentimeter = (inch) => {
   let num = Number(inch) * 2.54;
   return Math.round(num * 100) / 100;
 };
 
-const convertKilometerToMile = kilometer => {
+const convertKilometerToMile = (kilometer) => {
   let num = Number(kilometer) / 1.609;
   return Math.round(num * 100) / 100;
 };
 
-const convertKilometerToFoot = kilometer => {
+const convertKilometerToFoot = (kilometer) => {
   let num = Number(kilometer) * 3280.84;
   return Math.round(num * 100) / 100;
 };
 
-const convertKilometerToInch = kilometer => {
+const convertKilometerToInch = (kilometer) => {
   let num = Number(kilometer) * 39370.079;
   return Math.round(num * 100) / 100;
 };
 
-const convertKilometerToMeter = kilometer => {
+const convertKilometerToMeter = (kilometer) => {
   let num = Number(kilometer) * 1000;
   return Math.round(num * 100) / 100;
 };
 
-const convertKilometerToCentimeter = kilometer => {
+const convertKilometerToCentimeter = (kilometer) => {
   let num = Number(kilometer) * 100000;
   return Math.round(num * 100) / 100;
 };
 
-const convertMeterToMile = meter => {
+const convertMeterToMile = (meter) => {
   let num = Number(meter) / 1609.344;
   return Math.round(num * 100) / 100;
 };
 
-const convertMeterToFoot = meter => {
+const convertMeterToFoot = (meter) => {
   let num = Number(meter) * 3.281;
   return Math.round(num * 100) / 100;
 };
 
-const convertMeterToInch = meter => {
+const convertMeterToInch = (meter) => {
   let num = Number(meter) * 39.37;
   return Math.round(num * 100) / 100;
 };
 
-const convertMeterToKilometer = meter => {
+const convertMeterToKilometer = (meter) => {
   let num = Number(meter) / 1000;
   return Math.round(num * 100) / 100;
 };
 
-const convertMeterToCentimeter = meter => {
+const convertMeterToCentimeter = (meter) => {
   let num = Number(meter) * 100;
   return Math.round(num * 100) / 100;
 };
 
-const convertCentimeterToMile = centimeter => {
+const convertCentimeterToMile = (centimeter) => {
   let num = Number(centimeter) / 160934.4;
   return Math.round(num * 100) / 100;
 };
 
-const convertCentimeterToFoot = centimeter => {
+const convertCentimeterToFoot = (centimeter) => {
   let num = Number(centimeter) / 30.48;
   return Math.round(num * 100) / 100;
 };
 
-const convertCentimeterToInch = centimeter => {
+const convertCentimeterToInch = (centimeter) => {
   let num = Number(centimeter) / 2.54;
   return Math.round(num * 100) / 100;
 };
 
-const convertCentimeterToKilometer = centimeter => {
+const convertCentimeterToKilometer = (centimeter) => {
   let num = Number(centimeter) / 100000;
   return Math.round(num * 100) / 100;
 };
 
-const convertCentimeterToMeter = centimeter => {
+const convertCentimeterToMeter = (centimeter) => {
   let num = Number(centimeter) / 100;
   return Math.round(num * 100) / 100;
 };
 
-const Length = props => {
+const Length = ({ setDisplaying }) => {
   const [mile, setMile] = useState("");
   const [foot, setFoot] = useState("");
   const [inch, setInch] = useState("");
@@ -229,7 +220,7 @@ const Length = props => {
   const [centimeter, setCentimeter] = useState("");
   const classes = useStyles();
 
-  const handleMileChange = event => {
+  const handleMileChange = (event) => {
     let value = event.target.value;
     setMile(value);
     setFoot(convertMileToFoot(value));
@@ -239,7 +230,7 @@ const Length = props => {
     setCentimeter(convertMileToCentimeter(value));
   };
 
-  const handleFootChange = event => {
+  const handleFootChange = (event) => {
     let value = event.target.value;
     setFoot(value);
     setMile(convertFootToMile(value));
@@ -249,7 +240,7 @@ const Length = props => {
     setCentimeter(convertFootToCentimeter(value));
   };
 
-  const handleInchChange = event => {
+  const handleInchChange = (event) => {
     let value = event.target.value;
     setInch(value);
     setMile(convertInchToMile(value));
@@ -259,7 +250,7 @@ const Length = props => {
     setCentimeter(convertInchToCentimeter(value));
   };
 
-  const handleKilometerChange = event => {
+  const handleKilometerChange = (event) => {
     let value = event.target.value;
     setKilometer(value);
     setMile(convertKilometerToMile(value));
@@ -269,7 +260,7 @@ const Length = props => {
     setCentimeter(convertKilometerToCentimeter(value));
   };
 
-  const handleMeterChange = event => {
+  const handleMeterChange = (event) => {
     let value = event.target.value;
     setMeter(value);
     setMile(convertMeterToMile(value));
@@ -279,7 +270,7 @@ const Length = props => {
     setCentimeter(convertMeterToCentimeter(value));
   };
 
-  const handleCentimeterChange = event => {
+  const handleCentimeterChange = (event) => {
     let value = event.target.value;
     setCentimeter(value);
     setMile(convertCentimeterToMile(value));
@@ -290,13 +281,11 @@ const Length = props => {
   };
 
   return (
-    <div className={classes.tempDiv}>
+    <Box className={classes.tempDiv}>
       <Typography variant="h4" className={classes.title}>
-        <i class="fas fa-ruler" style={styles.icon}></i>Length
+        <i className="fas fa-ruler" style={styles.icon}></i>Length
       </Typography>
-      {/* Mile */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.mileInput}
@@ -309,12 +298,10 @@ const Length = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
-      {/* Foot */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.footInput}
@@ -327,12 +314,10 @@ const Length = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
-      {/* Inch */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.inchInput}
@@ -345,12 +330,10 @@ const Length = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
-      {/* Kilometer */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.kmInput}
@@ -363,12 +346,10 @@ const Length = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
-      {/* Meter */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.meterInput}
@@ -381,12 +362,10 @@ const Length = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
-      {/* Centimeter */}
       <Input
-        id="standard-adornment-weight"
         type="number"
         className={classes.inputBoxes}
         style={styles.cmInput}
@@ -399,18 +378,17 @@ const Length = props => {
         }
         aria-describedby="standard-weight-helper-text"
         inputProps={{
-          "aria-label": "weight"
+          "aria-label": "weight",
         }}
       />
       <Button
-        // variant="contained"
         className={classes.button}
         style={styles.backButton}
-        onClick={() => props.setDisplaying("")}
+        onClick={() => setDisplaying("")}
       >
-        <i class="fas fa-long-arrow-alt-left fa-3x"></i>
+        <i className="fas fa-long-arrow-alt-left fa-3x"></i>
       </Button>
-    </div>
+    </Box>
   );
 };
 
