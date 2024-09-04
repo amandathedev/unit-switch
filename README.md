@@ -2,7 +2,11 @@
 
 Convert between many different units quickly and easily without leaving the current page.
 
-![Demo Image](demo-large.png)
+![us-screenshot-1400](https://github.com/user-attachments/assets/84015615-3d48-425f-a423-5973a60ccc85)
+
+![Untitled design (3)](https://github.com/user-attachments/assets/3ea0c2ae-6af3-4b11-8346-cda69de2aad3)
+
+
 
 ## Installation
 
